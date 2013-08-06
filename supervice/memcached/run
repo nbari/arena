@@ -1,0 +1,11 @@
+#!/bin/sh
+
+PORT=11211
+LISTEN=127.0.0.1
+USER=nobody
+MAXCONN=1024
+CACHESIZE=512
+GROWTHFACT=1.25
+OPTIONS=""
+
+exec /arena/root/bin/memcached -l $LISTEN -p $PORT -u $USER  -m $CACHESIZE -c $MAXCONN -f $GROWTHFACT $OPTIONS

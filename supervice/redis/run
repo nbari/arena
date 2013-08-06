@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec setuidgid nobody /arena/root/bin/redis-server /arena/root/etc/redis.conf

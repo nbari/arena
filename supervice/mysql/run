@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec setuidgid mysql /arena/root/bin/mysqld --datadir=/arena/db/mysql --plugin-dir=/arena/root/lib/plugin --log-error=/arena/db/mysql/mysql.err
