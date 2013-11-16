@@ -24,3 +24,12 @@ Deployment schema for web applications and services
        |  `--log
        `--redis
           `-- log
+
+
+
+compiling ports
+---------------
+
+mysql:
+
+make install PREFIX=/arena/db/mysql/mysql-56
