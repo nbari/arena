@@ -31,3 +31,6 @@ compiling ports
 ---------------
 
 make install PREFIX=/arena/root
+
+
+poudriere jails -c -j 9stable -v stable/9 -m svn -J 4
