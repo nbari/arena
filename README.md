@@ -30,6 +30,4 @@ Deployment schema for web applications and services
 compiling ports
 ---------------
 
-mysql:
-
-make install PREFIX=/arena/db/mysql/mysql-56
+make install PREFIX=/arena/root
