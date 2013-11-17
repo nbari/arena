@@ -55,3 +55,13 @@ To update the repository:
 
     poudriere ports -u # this update your default ports tree
     poudriere bulk -f ~/mylist2 -j 9amd64 -k
+
+
+
+The global make.conf looks like:
+
+    WITH_PKGNG=yes
+    NO_PROFILE=true
+    NO_X=true
+    WITHOUT_X11=yes
+    PREFIX=/arena/root
