@@ -33,4 +33,25 @@ compiling ports
 make install PREFIX=/arena/root
 
 
-poudriere jails -c -j 9amd64 -v stable/9 -a amd64 -m svn -J 4
+poudriere jails -c -j 9amd64 -v 9.2-RELEASE -a amd64
+
+poudriere jails -c -j 9amd64 -v stable/9 -a amd64 -m svn
+
+
+
+    poudriere options -c www/nginx
+
+Or if you want to configure all the options all the ports will be built with:
+
+    poudriere options -c `cat /usr/local/etc/poudriere-list`
+
+Build:
+
+    poudriere bulk -j 9amd64 www/nginx
+
+    poudriere bulk -f ~/mylist2 -j 9amd64
+
+To update the repository:
+
+    poudriere ports -u # this update your default ports tree
+    poudriere bulk -f ~/mylist2 -j 9amd64 -k
