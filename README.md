@@ -5,8 +5,15 @@ For microservices
 
     /arena
     |--service-name-1
-    |  |--home
-    |  |--home.ISO8601-time
+    |  |--src
+    |  |  `--src.ISO8601-time
+    |  |--check.py
+    |  |--@home
+    |  `--runit
+    |     |--run
+    |     `--log
+    |        |--run
+    |        `--main
     `--service-name-2
        |--home
        `--home.ISO8601-time
