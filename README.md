@@ -1,9 +1,21 @@
 arena
 =====
 
+For microservices
+
+    /arena
+    |--service-name-1
+    |  |--home
+    |  |--home.ISO8601-time
+    `--service-name-2
+       |--home
+       `--home.ISO8601-time
+
+
+
 Deployment schema for web applications and services
 
-    arena
+    /arena
     |--db
     |  |--mysql
     |  `--redis
