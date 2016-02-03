@@ -1,7 +1,7 @@
 arena
 =====
 
-For microservices
+Deployment schema for microservices / sites using host shared binaries:
 
     /arena
     |--service-name-1
@@ -10,17 +10,25 @@ For microservices
     |  |--check.py
     |  |--@current
     |  `--runit
+    |     |--env
     |     |--run
     |     `--log
     |        |--run
     |        `--main
     `--service-name-2
-       |--home
-       `--home.ISO8601-time
+       |--releases
+       |  `--ISO8601-time
+       |--check.py
+       |--@current
+       `--runit
+          |--env
+         |--run
+          `--log
+             |--run
+             `--main
 
 
-
-Deployment schema for web applications and services
+Deployment schema for "agnostic" host:
 
     /arena
     |--db
@@ -74,7 +82,6 @@ To update the repository:
 
     poudriere ports -u # this update your default ports tree
     poudriere bulk -f ~/mylist2 -j 9amd64 -k
-
 
 
 The global make.conf looks like:
