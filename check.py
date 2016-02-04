@@ -80,11 +80,10 @@ if not value:
 
     """ update home link """
     current_link = "/arena/%s/current" % app_name
-    if os.path.exists(current_link):
-        if os.path.islink(current_link):
-            os.unlink(current_link)
-        else:
-            shutil.rmtree(current_link)
+    if os.path.islink(current_link):
+        os.unlink(current_link)
+    elif os.path.exists(current_link):
+        shutil.rmtree(current_link)
 
     """ link dist_dir to current """
     os.symlink(dist_dir, current_link)
