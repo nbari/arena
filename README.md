@@ -5,6 +5,7 @@ Deployment schema for microservices / sites using host shared binaries:
 
     /arena
     |--service-name-1
+    |  |--app.bz2.tmp
     |  |--releases
     |  |  `--ISO8601-time
     |  |--check.py

@@ -98,6 +98,6 @@ if not value:
 print "ETAG found not updating, doing some cleaning..."
 os.chdir("/arena/%s/releases" % app_name)
 releases = sorted(filter(os.path.isdir, os.listdir('.')), key=os.path.getmtime)
-for k in releases[3:]:
+for k in releases[:-3]:
     shutil.rmtree(k)
 exit(0)
