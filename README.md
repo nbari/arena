@@ -23,7 +23,7 @@ Deployment schema for microservices / sites using host shared binaries:
        |--@current
        `--runit
           |--env
-         |--run
+          |--run
           `--log
              |--run
              `--main
