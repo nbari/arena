@@ -5,55 +5,17 @@ Deployment schema for microservices / sites using host shared binaries:
 
     /arena
     |--service-name-1
-    |  |--app.bz2.tmp
     |  |--releases
-    |  |  `--ISO8601-time
-    |  |--check.py
+    |  |  `--ISO8601-time # (date -Iseconds)
+    |  |--run.yml
     |  |--@current
-    |  `--runit
-    |     |--env
-    |     |--run
-    |     `--log
-    |        |--run
-    |        `--main
+    |  `--logs
     `--service-name-2
        |--releases
        |  `--ISO8601-time
-       |--check.py
+       |--run.yml
        |--@current
-       `--runit
-          |--env
-          |--run
-          `--log
-             |--run
-             `--main
-
-
-Deployment schema for "agnostic" host:
-
-    /arena
-    |--db
-    |  |--mysql
-    |  `--redis
-    |--home
-    |  |--apps
-    |  `--sites
-    |--logs
-    |--root
-    |  |--etc
-    |  |--bin
-    |  `--sbin
-    |--sandbox
-    |--src
-    `--supervise
-       |--memcached
-       |  `--log
-       |--mysql
-       |  `--log
-       `--redis
-          `-- log
-
-
+       `--logs
 
 compiling ports
 ---------------
